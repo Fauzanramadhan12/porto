@@ -3,25 +3,286 @@
 
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
-    <title>Portofolio | Fauzan</title>  
-    <meta name="keywords" content="Fauzan, Portfolio Fauzan, Fauzan Purma Ramadhan">
-    <meta name="description" content="Portofolio Fauzan Purma Ramadhan">
-    <meta name="author" content="Fauzan Purma Ramadhan">
 
+    <!-- Primary Meta Tags -->
+    <title>Portofolio | Fauzan Purma Ramadhan</title>
+    <meta name="title" content="Portofolio | Fauzan Purma Ramadhan">
+    <meta name="description" content="Portofolio resmi Fauzan Purma Ramadhan — menampilkan karya terbaik dalam bidang desain, web development, dan sistem informasi. Temukan pengalaman, kreativitas, dan inovasi dalam setiap proyek.">
+    <meta name="keywords" content="Fauzan, Portfolio Fauzan, Fauzan Purma Ramadhan, Web Developer, Desainer, CodeIgniter, PHP, HTML, CSS, JavaScript">
+    <meta name="author" content="Fauzan Purma Ramadhan">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="id">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#a89207">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fauzanramadhan12.github.io/porto/html/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fauzanramadhan12.github.io/porto/html/">
+    <meta property="og:title" content="Portofolio | Fauzan Purma Ramadhan">
+    <meta property="og:description" content="Kumpulan karya terbaik Fauzan Purma Ramadhan dalam bidang desain dan web development. Profesional, kreatif, dan berpengalaman.">
+    <meta property="og:image" content="https://fauzanramadhan12.github.io/porto/html/images/fpr.png">
+    <meta property="og:image:alt" content="Logo Fauzan Purma Ramadhan">
+    <meta property="og:site_name" content="Portofolio Fauzan Purma Ramadhan">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fauzanramadhan12.github.io/porto/html/">
+    <meta name="twitter:title" content="Portofolio | Fauzan Purma Ramadhan">
+    <meta name="twitter:description" content="Temukan karya kreatif Fauzan Purma Ramadhan di bidang desain dan pengembangan web.">
+    <meta name="twitter:image" content="https://fauzanramadhan12.github.io/porto/html/images/fpr.png">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/fpr.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/fpr.png">
+
+    <!-- CSS & Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/custom.css">
-	<script src="js/modernizr.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <script src="js/modernizr.js"></script>
+
+
+    <style>
+        .services-section {
+            padding: 60px 0;
+        }
+
+        .services-inner-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .services-inner-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .ser-icon {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .services-inner-box h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .services-inner-box p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .portfolio-slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow-x: auto; /* biar bisa digeser ke samping */
+            overflow-y: hidden; /* hilangkan scroll vertikal */
+            white-space: nowrap; /* biar item sejajar ke samping */
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .portfolio-slider {
+            display: inline-flex; /* sejajarkan item */
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            flex: 0 0 auto; /* jangan mengecil, biar sejajar */
+            width: 320px; /* atur ukuran setiap kotak */
+            text-align: center;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain; /* gambar tidak terpotong */
+            border-radius: 12px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-item h4 {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Efek hover */
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Hover efek gambar */
+        .portfolio-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* Judul di bawah gambar */
+        .portfolio-item h4 {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .portfolio-item h4 u {
+            text-decoration: none;
+            border-bottom: 2px solid #007bff;
+        }
+
+        /* Responsif: di tablet 2 kolom, di HP 1 kolom */
+        @media (max-width: 992px) {
+            .portfolio-item {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-item {
+                flex: 1 1 100%;
+            }
+
+            .portfolio-img {
+                height: 200px;
+            }
+        }
+
+        .gallery-single {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        }
+
+        .gallery-single img {
+        width: 100%;
+        transition: transform 0.3s ease;
+        }
+
+        .gallery-single:hover img {
+        transform: scale(1.05);
+        }
+
+        .img-overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.3s ease;
+        }
+
+        .gallery-single:hover .img-overlay {
+        opacity: 1;
+        }
+
+        #client {
+        background: #fff; /* background putih polos */
+        padding: 30px 0;
+        }
+
+        .section-title h3 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        }
+
+        .section-title p {
+        font-size: 16px;
+        color: #555;
+        max-width: 700px;
+        }
+
+        /* ==== SLIDER STYLE ==== */
+        .client-slider-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        }
+
+        .client-slider {
+        display: flex;
+        width: max-content;
+        animation: slide 70s linear infinite; /* gerak pelan dan halus */
+        }
+
+        .client-item {
+        min-width: 200px;
+        margin: 0 10px;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        }
+
+        .client-item:hover {
+        transform: scale(1.05);
+        }
+
+        /* gambar polos tanpa efek */
+        .client-img {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;     /* tidak melengkung */
+        box-shadow: none;     /* tanpa bayangan */
+        background: transparent; /* pastikan tidak ada warna di belakang */
+        }
+
+        /* Animasi geser otomatis */
+        @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+        .client-item {
+            min-width: 150px;
+        }
+        .client-img {
+            width: 100px;
+        }
+        }
+    </style>
 </head>
 <body id="page-top" class="politics_version">
 
@@ -112,51 +373,51 @@
         </path>
     </svg>
 
-    <div id="about" class="section wb fadeIn">
+    <div id="about" class="section wb">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="message-box">                        
-                        <h2>PROFIL.</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="message-box">
+                        <h2>PROFIL</h2>
                         <p align="justify">
-                            Profesional di bidang Teknologi Sistem Informasi dengan gelar Magister dan pengalaman lebih dari dua tahun di berbagai peran strategis, termasuk sebagai Web Developer, IT Support, Network Engineer, dan Analis Data. Berpengalaman dalam pengembangan perangkat lunak, manajemen basis data, konfigurasi jaringan, serta perencanaan strategi produk berbasis teknologi. <br>
-                            Selain peran teknis, juga aktif sebagai dosen, berkontribusi dalam dunia pendidikan tinggi melalui pengajaran dan pembimbingan mahasiswa pada bidang teknik informatika / sistem informasi, pemrograman, dan teknologi jaringan. <br>
+                            Profesional di bidang Teknologi Sistem Informasi dengan gelar Magister dan pengalaman lebih dari dua tahun di berbagai peran strategis, termasuk sebagai Web Developer, IT Support, Network Engineer, dan Analis Data. Berpengalaman dalam pengembangan perangkat lunak, manajemen basis data, konfigurasi jaringan, serta perencanaan strategi produk berbasis teknologi. <br><br>
+                            Selain peran teknis, juga aktif sebagai dosen, berkontribusi dalam dunia pendidikan tinggi melalui pengajaran dan pembimbingan mahasiswa pada bidang teknik informatika / sistem informasi, pemrograman, dan teknologi jaringan. <br><br>
                             Memiliki keterampilan kepemimpinan yang kuat, komunikasi yang efektif, serta kemampuan kolaborasi tim yang tinggi. Berorientasi pada solusi, dengan fokus utama pada efisiensi operasional dan peningkatan kepuasan pengguna melalui penerapan teknologi yang inovatif dan adaptif.
                         </p>
 
                         <a href="https://youtu.be/ZvDy5tziJao?si=y43pNI8Vzw3WoEy0" target="_blank" class="sim-btn btn-hover-new" data-text="Vidio Profil"><span>Vidio Profil</span></a>
                         <a href="https://drive.google.com/file/d/1TSKYV14ybTSm5KpzQZq48ektAF1LopK8/view?usp=sharing" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
-                    </div><!-- end messagebox -->
-                </div><!-- end col -->
+                    </div>
+                </div>
 
-                <div class="col-md-6">
-                    <div class="right-box-pro wow fadeIn">
-                        <img src="images/profil.jpg" alt="" class="img-fluid img-rounded">
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="right-box-pro">
+                        <img src="images/profil.jpg" alt="Profil" class="img-fluid img-rounded shadow-lg">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="testimonials" class="section wb fadeIn">
-        <div class="container">
+    <div id="testimonials" class="section wb">
+        <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
-                <h3>Pendidikan</h3>
-                <p>Berikut adalah riwayat pendidikan yang telah saya tempuh </p>
+                <h3>PENDIDIKAN</h3>
+                <p>Berikut adalah riwayat pendidikan yang telah saya tempuh.</p>
             </div>
 
             <div class="row">
-                <div class="col-md-12 col-sm-12 fadeIn">
-                    <div class="testimonial clearfix">
+                <div class="col-md-12">
+                    <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/unama.png" alt="" class="alignleft">
                             <h4>Teknik Informatika <small> Universitas Dinamika Bangsa</small></h4>
                         </div>
                     </div>
-                    <div class="testimonial clearfix">
+                    <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/msi.png" alt="" class="alignleft">
-                            <h4>Magister Sistem Informasi<small> Universitas Dinamika Bangsa</small></h4>
+                            <h4>Magister Sistem Informasi <small> Universitas Dinamika Bangsa</small></h4>
                         </div>
                     </div>
                 </div>
@@ -164,291 +425,550 @@
         </div>
     </div>
 
-    <div id="testimonials" class="section wb fadeIn">
-        <div class="container">
+    <div id="organisasi" class="section wb">
+        <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
-                <h3>Organisasi</h3>
-                <p>Pengalaman organisasi yang pernah saya ikuti, baik dalam lingkungan akademik maupun non-akademik. </p>
+                <h3>ORGANISASI</h3>
+                <p>Pengalaman organisasi yang pernah saya ikuti, baik dalam lingkungan akademik maupun non-akademik.</p>
             </div>
 
             <div class="row">
-                <div class="col-md-12 col-sm-12 fadeIn">
-                    <div class="testimonial clearfix">
+                <div class="col-md-12">
+                    <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
                             <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> Kominfo | 2019 - 2021</small></h4>
                         </div>
                     </div>
-                    <div class="testimonial clearfix">
+                    <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/bem.png" alt="" class="alignleft">
-                            <h4>BEM KM UNAMA<small> Staff Pengembangan Sumber Daya Mahasiswa | 2021 - 2022 </small></h4>
+                            <h4>BEM KM UNAMA <small> Staff Pengembangan Sumber Daya Mahasiswa | 2021 - 2022</small></h4>
                         </div>
                     </div>
-                    <div class="testimonial clearfix">
+                    <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/suga.png" alt="" class="alignleft">
-                            <h4>Himpunan Mahasiswa Sungai Gantang<small> Sekretaris | 2021 - 2022 </small></h4>
+                            <h4>Himpunan Mahasiswa Sungai Gantang <small> Sekretaris | 2021 - 2022</small></h4>
                         </div>
                     </div>
-                    <div class="testimonial clearfix">
+                    <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
-                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi<small> Sekretari Umum | 2021 - 2023 </small></h4>
+                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> Sekretaris Umum | 2021 - 2023</small></h4>
                         </div>
                     </div>
-                    <div class="testimonial clearfix">
+                    <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/knpi.png" alt="" class="alignleft">
-                            <h4>DPD KNPI Indragiri Hilir<small> Anggota Pengurus Pemuda Millenial </small></h4>
+                            <h4>DPD KNPI Indragiri Hilir <small> Anggota Pengurus Pemuda Millenial</small></h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-	
+
     <div id="services" class="section lb">
         <div class="container">
-            <div class="section-title text-left">
-                <h3>Menawarkan Jasa</h3>
-                <p>Apa saja si yang bisa saya lakukan.</p>
-            </div><!-- end title -->
+            <div class="section-title text-left" data-aos="fade-up">
+                <h3>LAYANAN</h3>
+                <p>Saya membantu bisnis dan individu membangun kehadiran digital yang kuat melalui teknologi, desain, dan solusi inovatif yang berfokus pada hasil.</p>
+            </div>
 
             <div class="row">
-				<div class="col-md-4">
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-seo"></i>
-						</div>
-						<h2>Web Development</h2>
-						<p>Saya memiliki pengalaman dalam pengembangan website interaktif menggunakan HTML, CSS, JavaScript, serta framework seperti Codeigniter.</p>
-					</div>
-                </div><!-- end col -->
-                <div class="col-md-4">
+                        <div class="ser-icon"><i class="flaticon-seo"></i></div>
+                        <h2>Web Development</h2>
+                        <p>Saya menciptakan website interaktif, modern, dan responsif yang mampu memberikan pengalaman terbaik bagi pengguna.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-development"></i>
-						</div>
-						<h2>IT Consultan</h2>
-						<p>Berpengalaman memberikan solusi TI kepada perusahaan dan organisasi, mulai dari analisis sistem hingga rekomendasi teknologi yang tepat.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
+                        <div class="ser-icon"><i class="flaticon-development"></i></div>
+                        <h2>IT Consultant</h2>
+                        <p>Membantu Anda menemukan solusi teknologi terbaik untuk mendukung tujuan bisnis secara efisien dan efektif.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-process"></i>
-						</div>
-						<h2>IT Support</h2>
-						<p>Saya memberikan dukungan teknis untuk perangkat keras, perangkat lunak, jaringan, serta membantu pengguna dalam pemecahan masalah.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
+                        <div class="ser-icon"><i class="flaticon-process"></i></div>
+                        <h2>System & Application Support</h2>
+                        <p>Menangani pemeliharaan dan troubleshooting sistem maupun aplikasi dengan cepat dan tepat.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-discuss-issue"></i>
-						</div>
-						<h2>Support</h2>
-						<p>Saya memberikan dukungan teknis untuk troubleshooting sistem dan aplikasi, baik secara langsung maupun jarak jauh.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
+                        <div class="ser-icon"><i class="flaticon-discuss-issue"></i></div>
+                        <h2>Web Idea & System Planning</h2>
+                        <p>Mengubah ide menjadi konsep web yang inovatif dan bernilai bisnis, sesuai tren digital masa kini.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="500">
                     <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea"></i>
-						</div>
-						<h2>Web Idea</h2>
-						<p>Memiliki kemampuan dalam merancang konsep dan arsitektur sistem web berdasarkan kebutuhan bisnis dan tren teknologi.</p>
-					</div>
-                </div><!-- end col -->
-				<div class="col-md-4">
-                    <div class="services-inner-box">
-						<div class="ser-icon">
-							<i class="flaticon-idea-1"></i>
-						</div>
-						<h2>Graphic Design</h2>
-						<p>Terampil menggunakan perangkat lunak desain seperti Adobe Photoshop dan Corel Draw untuk membuat konten visual yang menarik.</p>
-					</div>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
+                        <div class="ser-icon"><i class="flaticon-idea-1"></i></div>
+                        <h2>Graphic Design</h2>
+                        <p>Menghadirkan desain visual yang kuat, menarik, dan memperkuat identitas merek Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-	
-	<div id="portfolio" class="section lb">
-		<div class="container">
-			<div class="section-title text-left">
-                <h3>Portfolio</h3>
-                <p>Berikut adalah beberapa proyek dan karya terbaik yang pernah saya kerjakan.</p>
-            </div><!-- end title -->
-			
-			<div class="gallery-menu row">
-				<div class="col-md-12">
-					<div class="button-group filter-button-group text-left">
-						<button class="active" data-filter="*">All</button>
-						<button data-filter=".gal_a">Web Development</button>
-						<button data-filter=".gal_b">Graphic Design</button>
-					</div>
-				</div>
-			</div>
-			
-			<div class="gallery-list row">
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por1.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por1.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por2.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por2.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot1.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot1.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot2.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot2.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot3.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot3.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por3.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por3.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por4.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por4.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+    <div id="portfolio" class="section lb">
+        <div class="container">
+            <div class="section-title text-left" data-aos="fade-up">
+                <h3>PORTOFOLIO WEBSITE</h3>
+                <p>Kumpulan proyek dan karya terbaik yang pernah saya buat dalam bidang web development, serta sistem informasi.</p>
+            </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por5.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por5.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+            <div class="portfolio-slider-wrapper">
+                <div class="portfolio-slider" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot4.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot4.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_a">
+                            <img src="images/luminos_1.png" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <a href="https://luminos.or.id" target="_blank"><h6><u>LUMINOS INSTITUTE</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot5.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot5.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_b">
+                            <img src="images/unrida_1.png" alt="Project 2" class="portfolio-img">
+                        </div> <br>
+                        <a href="https://unrida.ac.id" target="_blank"><h6><u>UNIVERSITAS RIAU INDONESIA</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot6.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot6.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_c">
+                            <img src="images/rkm_1.png" alt="Project 3" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>SISTEM INFORMASI PENGAJUAN MATERIAL</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por6.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por6.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_d">
+                            <img src="images/alumni_1.png" alt="Project 4" class="portfolio-img">
+                        </div> <br>
+                        <a href="https://alumni.smkn1kempas.sch.id" target="_blank"><h6><u>SISTEM INFORMASI ALUMNI</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_a">
-					<div class="gallery-single fix">
-						<img src="images/por7.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/por7.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_e">
+                            <img src="images/erm_1.png" alt="Project 5" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>ERM RAWAT INAP</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot7.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot7.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_f">
+                            <img src="images/gempa_1.png" alt="Project 6" class="portfolio-img">
+                        </div> <br>
+                        <a href="https://banggempa.jambikota.go.id/" target="_blank"><h6><u>BANTUAN HUKUM GRATIS KOTA JAMBI</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot8.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot8.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_g">
+                            <img src="images/gis_1.png" alt="Project 7" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>GEOGRAFIS INVESTASI</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot9.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot9.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
+                    <div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_h">
+                            <img src="images/siakad_1.png" alt="Project 8" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>SISTEM INFORMASI AKADEMIK</u></h6></a>
+                    </div>
 
-                <div class="col-md-4 col-sm-6 gallery-grid gal_b">
-					<div class="gallery-single fix">
-						<img src="images/pot10.jpg" class="img-fluid" alt="Image">
-						<div class="img-overlay">
-							<a href="images/pot10.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+            </div>
+        </div>
 
-    <div id="project-stats" class="section wb">
+        <!-- GALLERY SECTION -->
+        <div id="gallery-section" class="container mt-5" style="display:none;">
+            <!-- GALERI A -->
+            <div class="row gallery-group gal_a">
+            <div class="col-md-4 col-sm-6 gallery-grid">
+                <div class="gallery-single fix">
+                <img src="images/luminos_2.png" class="img-fluid" alt="Image 1">
+                <div class="img-overlay">
+                    <a href="images/luminos_2.png" data-rel="prettyPhoto[gal_a]" class="hoverbutton global-radius">
+                    <i class="fa fa-picture-o"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-grid">
+                <div class="gallery-single fix">
+                <img src="images/luminos_3.png" class="img-fluid" alt="Image 2">
+                <div class="img-overlay">
+                    <a href="images/luminos_3.png" data-rel="prettyPhoto[gal_a]" class="hoverbutton global-radius">
+                    <i class="fa fa-picture-o"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 gallery-grid">
+                <div class="gallery-single fix">
+                <img src="images/luminos_4.png" class="img-fluid" alt="Image 3">
+                <div class="img-overlay">
+                    <a href="images/luminos_4.png" data-rel="prettyPhoto[gal_a]" class="hoverbutton global-radius">
+                    <i class="fa fa-picture-o"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- GALERI B -->
+            <div class="row gallery-group gal_b" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/unrida_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/unrida_2.png" data-rel="prettyPhoto[gal_b]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/unrida_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/unrida_3.png" data-rel="prettyPhoto[gal_b]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/unrida_1.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/unrida_1.png" data-rel="prettyPhoto[gal_b]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALERI C -->
+            <div class="row gallery-group gal_c" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/rkm_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/rkm_2.png" data-rel="prettyPhoto[gal_c]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/rkm_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/rkm_3.png" data-rel="prettyPhoto[gal_c]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/rkm_4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/rkm_4.png" data-rel="prettyPhoto[gal_c]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALERI D -->
+            <div class="row gallery-group gal_d" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/alumni_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/alumni_2.png" data-rel="prettyPhoto[gal_d]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/alumni_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/alumni_3.png" data-rel="prettyPhoto[gal_d]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/alumni_4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/alumni_4.png" data-rel="prettyPhoto[gal_d]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALERI E -->
+            <div class="row gallery-group gal_e" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/erm_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/erm_2.png" data-rel="prettyPhoto[gal_e]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/erm_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/erm_3.png" data-rel="prettyPhoto[gal_e]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/erm_1.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/erm_1.png" data-rel="prettyPhoto[gal_e]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- GALERI F -->
+            <div class="row gallery-group gal_f" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gempa_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/gempa_2.png" data-rel="prettyPhoto[gal_f]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gempa_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/gempa_3.png" data-rel="prettyPhoto[gal_f]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gempa_4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/gempa_4.png" data-rel="prettyPhoto[gal_f]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALERI G -->
+            <div class="row gallery-group gal_g" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gis_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/gis_2.png" data-rel="prettyPhoto[gal_g]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gis_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/gis_3.png" data-rel="prettyPhoto[gal_g]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/gis_4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/gis_4.png" data-rel="prettyPhoto[gal_g]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GALERI H -->
+            <div class="row gallery-group gal_h" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/siakad_2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/siakad_2.png" data-rel="prettyPhoto[gal_h]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/siakad_3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/siakad_3.png" data-rel="prettyPhoto[gal_h]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/siakad_4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/siakad_4.png" data-rel="prettyPhoto[gal_h]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="portfolio" class="section lb">
+        <div class="container">
+            <div class="section-title text-left" data-aos="fade-up">
+                <h3>PORTOFOLIO DESIGN</h3>
+                <p>Kumpulan proyek dan karya terbaik yang pernah saya buat dalam bidang desain.</p>
+            </div>
+
+            <div class="portfolio-slider-wrapper">
+                <div class="portfolio-slider" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot2.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot1.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot3.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot4.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot5.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot6.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot7.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot8.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot9.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="">
+                            <img src="images/pot10.jpg" alt="Project 1" class="portfolio-img">
+                        </div> <br>
+                        <h6></h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-stats" class="section wb" data-aos="fade-up">
         <div class="overlay" style="position:absolute; top:0; left:0; right:0; bottom:0; background-color: rgba(168, 146, 7, 0.7); z-index:1;"></div>
 
         <div class="container" style="position: relative; z-index: 2;">
@@ -473,7 +993,7 @@
         </div>
     </div>
 
-	<div id="blog" class="section lb">
+	<div id="blog" class="section lb" data-aos="fade-up">
 		<div class="container">
 			<div class="section-title text-left">
                 <h3>Jejak Perjalanan</h3>
@@ -496,7 +1016,11 @@
                                 <li>by Fpr</li>
                                 <li>03 Agustus 2024</li>
                             </ul>
-							<p>Perjalanan menempuh pendidikan Magister bukanlah hal yang mudah. Dibutuhkan ketekunan, disiplin, dan semangat yang tidak pernah padam. Setelah melewati berbagai tantangan, mulai dari membagi waktu antara pekerjaan dan studi, menyelesaikan penelitian, hingga mempertahankan tesis, akhirnya saya berhasil menyelesaikan studi S2 dan meraih gelar Magister.</p>
+							<p class="text-justify">Perjalanan menempuh pendidikan Magister bukanlah jalan yang lurus dan mudah dilalui. Setiap langkah penuh dengan tantangan, pengorbanan, dan pembelajaran berharga. Di tengah padatnya aktivitas dan tanggung jawab pekerjaan, saya harus mampu membagi waktu, menjaga konsistensi, serta mempertahankan semangat ketika rasa lelah datang menghampiri.
+
+                                Ada saat-saat di mana keraguan muncul, ketika penelitian menemui jalan buntu atau ketika waktu terasa begitu sempit. Namun dengan tekad yang kuat, doa yang tak pernah putus, serta dukungan dari keluarga dan orang-orang terdekat, perlahan semua hambatan bisa dilalui.
+
+                                Perjalanan ini bukan sekadar tentang gelar di akhir nama, tetapi tentang proses pendewasaan diri, ketekunan dalam belajar, dan keyakinan bahwa setiap usaha tidak akan pernah sia-sia. Hingga akhirnya, dengan penuh rasa syukur, saya berhasil menyelesaikan studi S2 dan resmi meraih gelar Magister — sebagai bukti nyata bahwa kerja keras, kesabaran, dan doa mampu menuntun pada keberhasilan.</p>
 						</div>
 					</div>
 				</div>
@@ -505,7 +1029,32 @@
 		</div>
 	</div>
 
-    <div id="contact" class="section db">
+    <section id="client" class="section lb" data-aos="fade-up">
+        <div class="container">
+            <div class="section-title text-left" data-aos="fade-up">
+            <h3>Client</h3>
+            <p>Terima kasih kepada para klien yang telah mempercayakan kebutuhan desain mereka. 
+            Setiap karya di bawah ini adalah hasil kolaborasi untuk menciptakan desain yang bermakna, profesional, dan berkelas.</p>
+            </div>
+
+            <div class="client-slider-wrapper">
+                <div class="client-slider" id="autoSlider">
+
+                    <div class="client-item"><img src="images/bem.png" alt="Client 1" class="client-img"></div>
+                    <div class="client-item"><img src="images/ipmr.png" alt="Client 2" class="client-img"></div>
+                    <div class="client-item"><img src="images/knpi.png" alt="Client 3" class="client-img"></div>
+                    <div class="client-item"><img src="images/suga.png" alt="Client 4" class="client-img"></div>
+                    <div class="client-item"><img src="images/luminos.png" alt="Client 5" class="client-img"></div>
+                    <div class="client-item"><img src="images/unrida.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/smk.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/hmi.webp" alt="Client 6" class="client-img"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact" class="section db" data-aos="fade-up">
         <div class="container">
             <div class="section-title text-left">
                 <h3>Contact</h3>
@@ -576,6 +1125,36 @@
             counters.forEach(counter => {
                 animateCountUp(counter);
             });
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true
+    });
+    </script>
+
+    <script>
+        document.querySelectorAll('.open-gallery-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetClass = this.getAttribute('data-filter');
+            const gallerySection = document.getElementById('gallery-section');
+
+            // Tampilkan section galeri
+            gallerySection.style.display = 'block';
+
+            // Sembunyikan semua galeri
+            document.querySelectorAll('.gallery-group').forEach(g => g.style.display = 'none');
+
+            // Tampilkan galeri sesuai filter
+            document.querySelectorAll(targetClass).forEach(g => g.style.display = 'flex');
+
+            // Scroll ke bawah
+            gallerySection.scrollIntoView({ behavior: 'smooth' });
+        });
         });
     </script>
 
