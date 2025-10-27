@@ -100,28 +100,28 @@
         .portfolio-slider-wrapper {
             position: relative;
             width: 100%;
-            overflow-x: auto; /* biar bisa digeser ke samping */
-            overflow-y: hidden; /* hilangkan scroll vertikal */
-            white-space: nowrap; /* biar item sejajar ke samping */
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
             padding-bottom: 10px;
             scroll-behavior: smooth;
         }
 
         .portfolio-slider {
-            display: inline-flex; /* sejajarkan item */
+            display: inline-flex;
             gap: 30px;
         }
 
         .portfolio-item {
-            flex: 0 0 auto; /* jangan mengecil, biar sejajar */
-            width: 320px; /* atur ukuran setiap kotak */
+            flex: 0 0 auto;
+            width: 320px;
             text-align: center;
         }
 
         .portfolio-img {
             width: 100%;
             height: 220px;
-            object-fit: contain; /* gambar tidak terpotong */
+            object-fit: contain;
             border-radius: 12px;
             transition: all 0.3s ease;
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -137,18 +137,15 @@
             font-size: 16px;
         }
 
-        /* Efek hover */
         .portfolio-item:hover {
             transform: translateY(-8px);
         }
 
-        /* Hover efek gambar */
         .portfolio-img:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        /* Judul di bawah gambar */
         .portfolio-item h4 {
             margin-top: 15px;
             font-size: 18px;
@@ -160,7 +157,6 @@
             border-bottom: 2px solid #007bff;
         }
 
-        /* Responsif: di tablet 2 kolom, di HP 1 kolom */
         @media (max-width: 992px) {
             .portfolio-item {
                 flex: 1 1 45%;
@@ -209,7 +205,7 @@
         }
 
         #client {
-        background: #fff; /* background putih polos */
+        background: #fff;
         padding: 30px 0;
         }
 
@@ -225,7 +221,6 @@
         max-width: 700px;
         }
 
-        /* ==== SLIDER STYLE ==== */
         .client-slider-wrapper {
         overflow: hidden;
         position: relative;
@@ -236,7 +231,7 @@
         .client-slider {
         display: flex;
         width: max-content;
-        animation: slide 70s linear infinite; /* gerak pelan dan halus */
+        animation: slide 70s linear infinite; 
         }
 
         .client-item {
@@ -252,17 +247,15 @@
         transform: scale(1.05);
         }
 
-        /* gambar polos tanpa efek */
         .client-img {
         width: 100px;
         height: auto;
         object-fit: contain;
-        border-radius: 0;     /* tidak melengkung */
-        box-shadow: none;     /* tanpa bayangan */
-        background: transparent; /* pastikan tidak ada warna di belakang */
+        border-radius: 0;  
+        box-shadow: none; 
+        background: transparent;
         }
 
-        /* Animasi geser otomatis */
         @keyframes slide {
         0% {
             transform: translateX(0);
@@ -272,7 +265,6 @@
         }
         }
 
-        /* Responsif */
         @media (max-width: 768px) {
         .client-item {
             min-width: 150px;
@@ -492,14 +484,14 @@
               <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Profil</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Profile</a>
             </li>
             
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#testimonials">Pendidikan</a>
+              <a class="nav-link js-scroll-trigger" href="#testimonials">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Jasa</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Service</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -517,8 +509,8 @@
 	
 	<section id="home" class="main-banner parallaxie" style="background: url('images/awal1.jpg')">
 		<div class="heading">
-			<h1>halo saya Fauzan</h1>
-			<p>"Hidup adalah Pilihan, maka saya memili sebagai"</p>
+			<h1>Hello, I'm Fauzan</h1>
+			<p>"Life is a choice, so I choose as"</p>
 			<h3 class="cd-headline clip is-full-width">
 				<span class="cd-words-wrapper">
 					<b class="is-visible">IT Consultan</b>
@@ -559,21 +551,24 @@
             <div class="row align-items-center">
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="message-box">
-                        <h2>PROFIL</h2>
+                        <h2>PROFILE</h2>
                         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 					        <p style="font-size: 17px; line-height: 1.8; text-align: justify;">
-					          Profesional di bidang <b>Teknologi Informasi dan Sistem Informasi</b> dengan gelar <b>Magister</b> serta pengalaman lebih dari dua tahun sebagai 
-					          <b>Web Developer, IT Support, Network Engineer,</b> dan <b>Analis Data</b>.<br><br>
-					
-					          Berpengalaman dalam <b>pengembangan web</b>, <b>manajemen basis data</b>, serta <b>implementasi sistem berbasis teknologi</b> untuk meningkatkan efisiensi dan produktivitas.<br><br>
-					
-					          Aktif juga sebagai <b>dosen</b>, membimbing mahasiswa di bidang <b>pemrograman, jaringan komputer,</b> dan <b>sistem informasi</b> dengan pendekatan pembelajaran yang praktis dan inovatif.<br><br>
-					
-					          Memiliki kemampuan <b>kepemimpinan, komunikasi,</b> dan <b>kolaborasi</b> yang kuat, serta berkomitmen menghadirkan solusi digital yang <b>inovatif dan adaptif</b>.
+					            A <b>professional in Information Technology and Information Systems</b> with a <b>Master’s degree</b> 
+                                and over two years of experience as a <b>Web Developer, IT Support, Network Engineer,</b> and <b>Data Analyst</b>.<br><br>
+
+                                Skilled in <b>web development</b>, <b>database management</b>, and the <b>implementation of technology-based systems</b> 
+                                to enhance efficiency and productivity.<br><br>
+
+                                Also active as a <b>lecturer</b>, mentoring students in <b>programming, computer networks,</b> 
+                                and <b>information systems</b> through a practical and innovative learning approach.<br><br>
+
+                                Possesses strong <b>leadership, communication,</b> and <b>collaboration</b> skills, 
+                                with a commitment to delivering <b>innovative and adaptive digital solutions</b>.
 					        </p>
 					      </div>
 
-                        <a href="https://youtu.be/ZvDy5tziJao?si=y43pNI8Vzw3WoEy0" target="_blank" class="sim-btn btn-hover-new" data-text="Vidio Profil"><span>Vidio Profil</span></a>
+                        <a href="https://youtu.be/ZvDy5tziJao?si=y43pNI8Vzw3WoEy0" target="_blank" class="sim-btn btn-hover-new" data-text="Vidio Profil"><span>Profile Video</span></a>
                         <a href="https://drive.google.com/file/d/1TSKYV14ybTSm5KpzQZq48ektAF1LopK8/view?usp=sharing" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
                     </div>
                 </div>
@@ -590,8 +585,8 @@
     <div id="testimonials" class="section wb">
         <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
-                <h3>PENDIDIKAN</h3>
-                <p>Berikut adalah riwayat pendidikan yang telah saya tempuh.</p>
+                <h3>EDUCATION</h3>
+                <p>The following is a history of the education I have taken.</p>
             </div>
 
             <div class="row">
@@ -599,13 +594,13 @@
                     <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/unama.png" alt="" class="alignleft">
-                            <h4>Teknik Informatika <small> Universitas Dinamika Bangsa</small></h4>
+                            <h4>Informatics Engineering <small> National Dynamics University</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/msi.png" alt="" class="alignleft">
-                            <h4>Magister Sistem Informasi <small> Universitas Dinamika Bangsa</small></h4>
+                            <h4>Master of Information Systems <small> National Dynamics University</small></h4>
                         </div>
                     </div>
                 </div>
@@ -616,8 +611,8 @@
     <div id="organisasi" class="section wb">
         <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
-                <h3>ORGANISASI</h3>
-                <p>Pengalaman organisasi yang pernah saya ikuti, baik dalam lingkungan akademik maupun non-akademik.</p>
+                <h3>ORGANIZATION</h3>
+                <p>Organizational experiences that I have participated in, both in academic and non-academic environments.</p>
             </div>
 
             <div class="row">
@@ -625,31 +620,31 @@
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
-                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> Kominfo | 2019 - 2021</small></h4>
+                            <h4>Riau Student Association (IPMR) Jambi <small> Ministry of Communication and Information Technology | 2019 - 2021</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/bem.png" alt="" class="alignleft">
-                            <h4>BEM KM UNAMA <small> Staff Pengembangan Sumber Daya Mahasiswa | 2021 - 2022</small></h4>
+                            <h4>Student Executive Board of UNAMA <small> Student Resource Development Staff | 2021 - 2022</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/suga.png" alt="" class="alignleft">
-                            <h4>Himpunan Mahasiswa Sungai Gantang <small> Sekretaris | 2021 - 2022</small></h4>
+                            <h4>Gantang River Student Association <small> Secretary | 2021 - 2022</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
-                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> Sekretaris Umum | 2021 - 2023</small></h4>
+                            <h4>Riau Student Association (IPMR) Jambi <small> general Secretary | 2021 - 2023</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/knpi.png" alt="" class="alignleft">
-                            <h4>DPD KNPI Indragiri Hilir <small> Anggota Pengurus Pemuda Millenial</small></h4>
+                            <h4>DPD KNPI Indragiri Hilir <small> Member of the Millennial Youth Management</small></h4>
                         </div>
                     </div>
                 </div>
@@ -660,8 +655,8 @@
     <div id="services" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>LAYANAN</h3>
-                <p>Saya membantu bisnis dan individu membangun kehadiran digital yang kuat melalui teknologi, desain, dan solusi inovatif yang berfokus pada hasil.</p>
+                <h3>SERVICE</h3>
+                <p>I help businesses and individuals build a strong digital presence through technology, design, and innovative, results-focused solutions..</p>
             </div>
 
             <div class="row">
@@ -669,7 +664,7 @@
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-seo"></i></div>
                         <h2>Web Development</h2>
-                        <p>Saya menciptakan website interaktif, modern, dan responsif yang mampu memberikan pengalaman terbaik bagi pengguna.</p>
+                        <p>I create interactive, modern, and responsive websites that provide the best user experience..</p>
                     </div>
                 </div>
 
@@ -677,7 +672,7 @@
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-development"></i></div>
                         <h2>IT Consultant</h2>
-                        <p>Membantu Anda menemukan solusi teknologi terbaik untuk mendukung tujuan bisnis secara efisien dan efektif.</p>
+                        <p>Helping you find the best technology solutions to support your business goals efficiently and effectively..</p>
                     </div>
                 </div>
 
@@ -685,7 +680,7 @@
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-process"></i></div>
                         <h2>System & Application Support</h2>
-                        <p>Menangani pemeliharaan dan troubleshooting sistem maupun aplikasi dengan cepat dan tepat.</p>
+                        <p>Handle system and application maintenance and troubleshooting quickly and accurately.</p>
                     </div>
                 </div>
 
@@ -693,7 +688,7 @@
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-discuss-issue"></i></div>
                         <h2>Web Idea & System Planning</h2>
-                        <p>Mengubah ide menjadi konsep web yang inovatif dan bernilai bisnis, sesuai tren digital masa kini.</p>
+                        <p>Transforming ideas into innovative and business-worthy web concepts, in line with current digital trends.</p>
                     </div>
                 </div>
 
@@ -701,7 +696,7 @@
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-idea-1"></i></div>
                         <h2>Graphic Design</h2>
-                        <p>Menghadirkan desain visual yang kuat, menarik, dan memperkuat identitas merek Anda.</p>
+                        <p>Delivering strong, engaging visual designs that strengthen your brand identity.</p>
                     </div>
                 </div>
             </div>
@@ -711,8 +706,8 @@
     <div id="portfolio" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>PORTOFOLIO WEBSITE</h3>
-                <p>Kumpulan proyek dan karya terbaik yang pernah saya buat dalam bidang web development, serta sistem informasi.</p>
+                <h3>WEBSITE PORTFOLIO</h3>
+                <p>A collection of the best projects and works that I have ever made in the field of web development and information systems..</p>
             </div>
 
             <div class="portfolio-slider-wrapper">
@@ -729,49 +724,49 @@
                         <div class="open-gallery-btn" data-filter=".gal_b">
                             <img src="images/unrida_1.png" alt="Project 2" class="portfolio-img">
                         </div> <br>
-                        <a href="https://unrida.ac.id" target="_blank"><h6><u>UNIVERSITAS RIAU INDONESIA</u></h6></a>
+                        <a href="https://unrida.ac.id" target="_blank"><h6><u>UNIVERSITY OF RIAU INDONESIA</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_c">
                             <img src="images/rkm_1.png" alt="Project 3" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>SISTEM INFORMASI PENGAJUAN MATERIAL</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>MATERIAL SUBMISSION INFORMATION SYSTEM</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_d">
                             <img src="images/alumni_1.png" alt="Project 4" class="portfolio-img">
                         </div> <br>
-                        <a href="https://alumni.smkn1kempas.sch.id" target="_blank"><h6><u>SISTEM INFORMASI ALUMNI</u></h6></a>
+                        <a href="https://alumni.smkn1kempas.sch.id" target="_blank"><h6><u>ALUMNI INFORMATION SYSTEM</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_e">
                             <img src="images/erm_1.png" alt="Project 5" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>ERM RAWAT INAP</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>INPATIENT ERM</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_f">
                             <img src="images/gempa_1.png" alt="Project 6" class="portfolio-img">
                         </div> <br>
-                        <a href="https://banggempa.jambikota.go.id/" target="_blank"><h6><u>BANTUAN HUKUM GRATIS KOTA JAMBI</u></h6></a>
+                        <a href="https://banggempa.jambikota.go.id/" target="_blank"><h6><u>FREE LEGAL AID IN JAMBI CITY</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_g">
                             <img src="images/gis_1.png" alt="Project 7" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>GEOGRAFIS INVESTASI</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>INVESTMENT GEOGRAPHICS</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_h">
                             <img src="images/siakad_1.png" alt="Project 8" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>SISTEM INFORMASI AKADEMIK</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>ACADEMIC INFORMATION SYSTEM</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -785,7 +780,7 @@
                         <div class="open-gallery-btn" data-filter=".gal_j">
                             <img src="images/ipmr_1.png" alt="Project 10" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>WEBSITE IPMR JAMBI</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>IPMR JAMBI WEBSITE</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -799,14 +794,14 @@
                         <div class="open-gallery-btn" data-filter=".gal_l">
                             <img src="images/simanis_1.png" alt="Project 12" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>SIMANIS (DINAS KETAHANAN PANGAN)</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>SIMANIS (FOOD SECURITY SERVICE)</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_m">
                             <img src="images/ct_1.png" alt="Project 13" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>CATATAN TINTAKU</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>MY INK NOTES</u></h6></a>
                     </div>
 
                 </div>
@@ -1290,7 +1285,7 @@
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
                 <h3>PORTOFOLIO DESIGN</h3>
-                <p>Kumpulan proyek dan karya terbaik yang pernah saya buat dalam bidang desain.</p>
+                <p>A collection of the best projects and works I have ever done in the field of design.</p>
             </div>
 
             <div class="design-slider" data-aos="fade-up" data-aos-delay="100">
@@ -1340,8 +1335,8 @@
     <div id="certifikat" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>SERTIFIKAT & PENGHARGAAN</h3>
-                <p>Beberapa sertifikat pelatihan dan kompetensi yang telah saya peroleh.</p>
+                <h3>CERTIFICATES and AWARDS</h3>
+                <p>Some of the training and competency certificates that I have obtained.</p>
             </div>
 
             <div class="certifikat-slider" data-aos="fade-up" data-aos-delay="100">
@@ -1384,8 +1379,8 @@
 	<div id="blog" class="section lb" data-aos="fade-up">
 		<div class="container">
 			<div class="section-title text-left">
-                <h3>Jejak Perjalanan</h3>
-                <p>Setiap tantangan yang datang memberi warna dan makna dalam proses kami membangun solusi yang lebih baik</p>
+                <h3>Travel Trail</h3>
+                <p>Every challenge that comes gives color and meaning to our process of building better solutions.</p>
             </div><!-- end title -->
 			
 			<div class="row">
@@ -1399,16 +1394,16 @@
 							</div>
 						</div>
 						<div class="post-info">
-							<h4>Perjalanan Panjang Yang Tela Dilewati.</h4>
+							<h4>The Long Journey That Has Been Passed.</h4>
 							<ul>
                                 <li>by Fpr</li>
                                 <li>03 Agustus 2024</li>
                             </ul>
-							<p class="text-justify">Perjalanan menempuh pendidikan Magister bukanlah jalan yang lurus dan mudah dilalui. Setiap langkah penuh dengan tantangan, pengorbanan, dan pembelajaran berharga. Di tengah padatnya aktivitas dan tanggung jawab pekerjaan, saya harus mampu membagi waktu, menjaga konsistensi, serta mempertahankan semangat ketika rasa lelah datang menghampiri.
+							<p class="text-justify">The journey to a Master's degree was not a straight or easy one. Every step was fraught with challenges, sacrifices, and valuable lessons. Amidst the busy schedule and responsibilities of my work, I had to manage my time, maintain consistency, and maintain my enthusiasm when fatigue set in.
 
-                                Ada saat-saat di mana keraguan muncul, ketika penelitian menemui jalan buntu atau ketika waktu terasa begitu sempit. Namun dengan tekad yang kuat, doa yang tak pernah putus, serta dukungan dari keluarga dan orang-orang terdekat, perlahan semua hambatan bisa dilalui.
+                            There were times when doubts arose, when research hit a dead end, or when time felt limited. However, with strong determination, unwavering prayer, and the support of family and those closest to me, I slowly overcame all obstacles.
 
-                                Perjalanan ini bukan sekadar tentang gelar di akhir nama, tetapi tentang proses pendewasaan diri, ketekunan dalam belajar, dan keyakinan bahwa setiap usaha tidak akan pernah sia-sia. Hingga akhirnya, dengan penuh rasa syukur, saya berhasil menyelesaikan studi S2 dan resmi meraih gelar Magister — sebagai bukti nyata bahwa kerja keras, kesabaran, dan doa mampu menuntun pada keberhasilan.</p>
+                            This journey wasn't just about the title at the end of my name, but about personal growth, perseverance in learning, and the belief that every effort is never in vain. Finally, with gratitude, I successfully completed my Master's studies and officially earned my Master's degree—a testament to the fact that hard work, patience, and prayer can lead to success.</p>
 						</div>
 					</div>
 				</div>
@@ -1421,8 +1416,8 @@
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
             <h3>Client</h3>
-            <p>Terima kasih kepada para klien yang telah mempercayakan kebutuhan desain mereka. 
-            Setiap karya di bawah ini adalah hasil kolaborasi untuk menciptakan desain yang bermakna, profesional, dan berkelas.</p>
+            <p>Thank you to the clients who have entrusted us with their design needs.
+                Each piece below is the result of a collaborative effort to create meaningful, professional, and classy designs.</p>
             </div>
 
             <div class="client-slider-wrapper">
@@ -1449,7 +1444,7 @@
         <div class="container">
             <div class="section-title text-left">
                 <h3>Contact</h3>
-                <p>Saya siap untuk terhubung dengan Anda! Jangan ragu menghubungi saya melalui informasi di bawah ini untuk kolaborasi, pertanyaan, atau sekadar menyapa.</p>
+                <p>I'm ready to connect with you! Feel free to contact me using the information below for collaborations, questions, or just to say hello.</p>
             </div>
 
             <div class="row">
