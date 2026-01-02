@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Primary Meta Tags -->
-    <title>Portofolio | Fauzan Purma Ramadhan</title>
+    <title>Fauzan Purma Ramadhan</title>
     <meta name="title" content="Portofolio | Fauzan Purma Ramadhan">
-    <meta name="description" content="Portofolio resmi Fauzan Purma Ramadhan — menampilkan karya terbaik dalam bidang desain, web development, dan sistem informasi. Temukan pengalaman, kreativitas, dan inovasi dalam setiap proyek.">
+    <meta name="description" content="Fauzan Purma Ramadhan's official portfolio — showcasing his best work in design, web development, and information systems. Discover experience, creativity, and innovation in every project.">
     <meta name="keywords" content="Fauzan, Portfolio Fauzan, Fauzan Purma Ramadhan, Web Developer, Desainer, CodeIgniter, PHP, HTML, CSS, JavaScript">
     <meta name="author" content="Fauzan Purma Ramadhan">
     <meta name="robots" content="index, follow">
@@ -26,8 +26,8 @@
     <meta property="og:locale" content="id_ID">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fauzanramadhan12.github.io/porto/html/">
-    <meta property="og:title" content="Portofolio | Fauzan Purma Ramadhan">
-    <meta property="og:description" content="Kumpulan karya terbaik Fauzan Purma Ramadhan dalam bidang desain dan web development. Profesional, kreatif, dan berpengalaman.">
+    <meta property="og:title" content="Fauzan Purma Ramadhan">
+    <meta property="og:description" content="A collection of Fauzan Purma Ramadhan's best work in design and web development. Professional, creative, and experienced.">
     <meta property="og:image" content="https://fauzanramadhan12.github.io/porto/html/images/fpr.png">
     <meta property="og:image:alt" content="Logo Fauzan Purma Ramadhan">
     <meta property="og:site_name" content="Portofolio Fauzan Purma Ramadhan">
@@ -36,7 +36,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://fauzanramadhan12.github.io/porto/html/">
     <meta name="twitter:title" content="Portofolio | Fauzan Purma Ramadhan">
-    <meta name="twitter:description" content="Temukan karya kreatif Fauzan Purma Ramadhan di bidang desain dan pengembangan web.">
+    <meta name="twitter:description" content="Discover Fauzan Purma Ramadhan's creative work in the field of web design and development.">
     <meta name="twitter:image" content="https://fauzanramadhan12.github.io/porto/html/images/fpr.png">
 
     <!-- Favicon -->
@@ -100,28 +100,28 @@
         .portfolio-slider-wrapper {
             position: relative;
             width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
+            overflow-x: auto; /* biar bisa digeser ke samping */
+            overflow-y: hidden; /* hilangkan scroll vertikal */
+            white-space: nowrap; /* biar item sejajar ke samping */
             padding-bottom: 10px;
             scroll-behavior: smooth;
         }
 
         .portfolio-slider {
-            display: inline-flex;
+            display: inline-flex; /* sejajarkan item */
             gap: 30px;
         }
 
         .portfolio-item {
-            flex: 0 0 auto;
-            width: 320px;
+            flex: 0 0 auto; /* jangan mengecil, biar sejajar */
+            width: 320px; /* atur ukuran setiap kotak */
             text-align: center;
         }
 
         .portfolio-img {
             width: 100%;
             height: 220px;
-            object-fit: contain;
+            object-fit: contain; /* gambar tidak terpotong */
             border-radius: 12px;
             transition: all 0.3s ease;
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -137,15 +137,18 @@
             font-size: 16px;
         }
 
+        /* Efek hover */
         .portfolio-item:hover {
             transform: translateY(-8px);
         }
 
+        /* Hover efek gambar */
         .portfolio-img:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
+        /* Judul di bawah gambar */
         .portfolio-item h4 {
             margin-top: 15px;
             font-size: 18px;
@@ -157,6 +160,7 @@
             border-bottom: 2px solid #007bff;
         }
 
+        /* Responsif: di tablet 2 kolom, di HP 1 kolom */
         @media (max-width: 992px) {
             .portfolio-item {
                 flex: 1 1 45%;
@@ -205,7 +209,7 @@
         }
 
         #client {
-        background: #fff;
+        background: #fff; /* background putih polos */
         padding: 30px 0;
         }
 
@@ -221,6 +225,7 @@
         max-width: 700px;
         }
 
+        /* ==== SLIDER STYLE ==== */
         .client-slider-wrapper {
         overflow: hidden;
         position: relative;
@@ -231,7 +236,7 @@
         .client-slider {
         display: flex;
         width: max-content;
-        animation: slide 70s linear infinite; 
+        animation: slide 70s linear infinite; /* gerak pelan dan halus */
         }
 
         .client-item {
@@ -247,15 +252,17 @@
         transform: scale(1.05);
         }
 
+        /* gambar polos tanpa efek */
         .client-img {
         width: 100px;
         height: auto;
         object-fit: contain;
-        border-radius: 0;  
-        box-shadow: none; 
-        background: transparent;
+        border-radius: 0;     /* tidak melengkung */
+        box-shadow: none;     /* tanpa bayangan */
+        background: transparent; /* pastikan tidak ada warna di belakang */
         }
 
+        /* Animasi geser otomatis */
         @keyframes slide {
         0% {
             transform: translateX(0);
@@ -265,6 +272,7 @@
         }
         }
 
+        /* Responsif */
         @media (max-width: 768px) {
         .client-item {
             min-width: 150px;
@@ -491,7 +499,7 @@
               <a class="nav-link js-scroll-trigger" href="#testimonials">Education</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Service</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -509,13 +517,14 @@
 	
 	<section id="home" class="main-banner parallaxie" style="background: url('images/awal1.jpg')">
 		<div class="heading">
-			<h1>Hello, I'm Fauzan</h1>
-			<p>"Life is a choice, so I choose as"</p>
+			<h1>Hello, I’m Fauzan</h1>
+			<p>Translating business needs into measurable, efficient, and sustainable system solutions.</p>
 			<h3 class="cd-headline clip is-full-width">
 				<span class="cd-words-wrapper">
-					<b class="is-visible">IT Consultan</b>
+					<b class="is-visible">System Analyst</b>
+					<b>IT Consultant</b>
 					<b>Web Developer</b>
-					<b>Graphic Design</b>
+					<b>Graphic Designer</b>
 				</span>
 			</h3>
 		</div>
@@ -554,22 +563,20 @@
                         <h2>PROFILE</h2>
                         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 					        <p style="font-size: 17px; line-height: 1.8; text-align: justify;">
-					            A <b>professional in Information Technology and Information Systems</b> with a <b>Master’s degree</b> 
-                                and over two years of experience as a <b>Web Developer, IT Support, Network Engineer,</b> and <b>Data Analyst</b>.<br><br>
-
-                                Skilled in <b>web development</b>, <b>database management</b>, and the <b>implementation of technology-based systems</b> 
-                                to enhance efficiency and productivity.<br><br>
-
-                                Also active as a <b>lecturer</b>, mentoring students in <b>programming, computer networks,</b> 
-                                and <b>information systems</b> through a practical and innovative learning approach.<br><br>
-
-                                Possesses strong <b>leadership, communication,</b> and <b>collaboration</b> skills, 
-                                with a commitment to delivering <b>innovative and adaptive digital solutions</b>.
+					          <b>Master’s degree professional in Information Technology and Information Systems</b>, with more than two years of experience as a 
+								<b>System Analyst</b>, <b>IT Consultant</b>, <b>Web Developer</b>, and <b>IT Project Manager</b> in designing and implementing technology-based system solutions.
+								<br><br>
+								Possesses strong expertise in <b>business requirements analysis</b>, <b>system design</b>, <b>web application development</b>, 
+								<b>database management</b>, and <b>IT project management</b> to ensure effective and business-driven solutions.
+								<br><br>
+								Supported by cross-functional technical experience and strong <b>leadership</b>, <b>communication</b>, and <b>collaboration</b> skills, 
+								with a commitment to delivering <b>strategic and sustainable digital solutions</b>.
 					        </p>
 					      </div>
 
-                        <a href="https://youtu.be/ZvDy5tziJao?si=y43pNI8Vzw3WoEy0" target="_blank" class="sim-btn btn-hover-new" data-text="Vidio Profil"><span>Profile Video</span></a>
-                        <a href="https://drive.google.com/file/d/1TSKYV14ybTSm5KpzQZq48ektAF1LopK8/view?usp=sharing" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Download CV</span></a>
+                        <a href="https://youtu.be/ZvDy5tziJao?si=y43pNI8Vzw3WoEy0" target="_blank" class="sim-btn btn-hover-new" data-text="Vidio Profil"><span>Vidio Profil</span></a>
+                        <a href="" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>CV</span></a>
+						<a href="" target="_blank" class="sim-btn btn-hover-new" data-text="Download CV"><span>Project Portfolio</span></a>
                     </div>
                 </div>
 
@@ -586,7 +593,7 @@
         <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
                 <h3>EDUCATION</h3>
-                <p>The following is a history of the education I have taken.</p>
+                <p>Below is my educational background.</p>
             </div>
 
             <div class="row">
@@ -594,13 +601,13 @@
                     <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/unama.png" alt="" class="alignleft">
-                            <h4>Informatics Engineering <small> National Dynamics University</small></h4>
+                            <h4>Informatics Engineering <small> Universitas Dinamika Bangsa</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="zoom-in">
                         <div class="testi-meta">
                             <img src="images/msi.png" alt="" class="alignleft">
-                            <h4>Master of Information Systems <small> National Dynamics University</small></h4>
+                            <h4>Master of Information Systems <small> Universitas Dinamika Bangsa</small></h4>
                         </div>
                     </div>
                 </div>
@@ -611,8 +618,8 @@
     <div id="organisasi" class="section wb">
         <div class="container" data-aos="fade-up">
             <div class="section-title text-left">
-                <h3>ORGANIZATION</h3>
-                <p>Organizational experiences that I have participated in, both in academic and non-academic environments.</p>
+                <h3>ORGANIZATIONS</h3>
+                <p>Organizational experiences I have been involved in, both academic and non-academic.</p>
             </div>
 
             <div class="row">
@@ -620,31 +627,60 @@
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
-                            <h4>Riau Student Association (IPMR) Jambi <small> Ministry of Communication and Information Technology | 2019 - 2021</small></h4>
+                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> Kominfo | 2019 - 2021</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/bem.png" alt="" class="alignleft">
-                            <h4>Student Executive Board of UNAMA <small> Student Resource Development Staff | 2021 - 2022</small></h4>
+                            <h4>BEM KM UNAMA <small> Student Development Staff | 2021 - 2022</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/suga.png" alt="" class="alignleft">
-                            <h4>Gantang River Student Association <small> Secretary | 2021 - 2022</small></h4>
+                            <h4>Himpunan Mahasiswa Sungai Gantang <small> Secretary | 2021 - 2022</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/ipmr.png" alt="" class="alignleft">
-                            <h4>Riau Student Association (IPMR) Jambi <small> general Secretary | 2021 - 2023</small></h4>
+                            <h4>Ikatan Pelajar Mahasiswa Riau (IPMR) Jambi <small> General Secretary | 2021 - 2023</small></h4>
                         </div>
                     </div>
                     <div class="testimonial clearfix" data-aos="fade-up">
                         <div class="testi-meta">
                             <img src="images/knpi.png" alt="" class="alignleft">
-                            <h4>DPD KNPI Indragiri Hilir <small> Member of the Millennial Youth Management</small></h4>
+                            <h4>DPD KNPI Indragiri Hilir <small> Millennial Youth Board Member</small></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div id="experience" class="section wb">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title text-left">
+                <h3>EXPERIENCE</h3>
+                <p>Professional experience in designing, managing, and implementing technology solutions to support business and organizational needs.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial clearfix" data-aos="fade-up">
+                        <div class="testi-meta">
+                            <h4>System Analyst & IT Project Manager <small> Designing and managing web-based systems to improve organizational operational efficiency.</small></h4>
+                        </div>
+                    </div>
+                    <div class="testimonial clearfix" data-aos="fade-up">
+                        <div class="testi-meta">
+                            <h4>Web Developer & IT Consultant <small> Developing web applications and providing technology solutions tailored to business needs.</small></h4>
+                        </div>
+                    </div>
+                    <div class="testimonial clearfix" data-aos="fade-up">
+                        <div class="testi-meta">
+                            <h4>Informatics Lecturer <small> Teaching and mentoring students in the field of programming and information systems.</small></h4>
                         </div>
                     </div>
                 </div>
@@ -655,48 +691,53 @@
     <div id="services" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>SERVICE</h3>
-                <p>I help businesses and individuals build a strong digital presence through technology, design, and innovative, results-focused solutions..</p>
+                <h3>SERVICES</h3>
+                <p>I help businesses and individuals build a strong digital presence through technology, design, and result-oriented innovative solutions.</p>
             </div>
 
             <div class="row">
+				<div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+				    <div class="services-inner-box">
+				        <h2>System Analyst</h2>
+				        <p>
+				            User requirements analysis, system design, and technology solutions aligned with business processes.
+				        </p>
+				    </div>
+				</div>
+				
                 <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="services-inner-box">
-                        <div class="ser-icon"><i class="flaticon-seo"></i></div>
-                        <h2>Web Development</h2>
-                        <p>I create interactive, modern, and responsive websites that provide the best user experience..</p>
+                        <h2>Full-Stack Development</h2>
+                        <p>Development and maintenance of web-based applications, including backend logic, database integration, and system optimization.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="services-inner-box">
-                        <div class="ser-icon"><i class="flaticon-development"></i></div>
                         <h2>IT Consultant</h2>
-                        <p>Helping you find the best technology solutions to support your business goals efficiently and effectively..</p>
+                        <p>Providing IT solution recommendations based on organizational needs, operational efficiency, and infrastructure readiness.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="services-inner-box">
-                        <div class="ser-icon"><i class="flaticon-process"></i></div>
                         <h2>System & Application Support</h2>
-                        <p>Handle system and application maintenance and troubleshooting quickly and accurately.</p>
+                        <p>Handling system and application maintenance and troubleshooting efficiently.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="services-inner-box">
                         <div class="ser-icon"><i class="flaticon-discuss-issue"></i></div>
-                        <h2>Web Idea & System Planning</h2>
-                        <p>Transforming ideas into innovative and business-worthy web concepts, in line with current digital trends.</p>
+                        <h2>IT Project Management</h2>
+                        <p>Planning, coordinating, and controlling IT projects from analysis to system implementation.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="500">
                     <div class="services-inner-box">
-                        <div class="ser-icon"><i class="flaticon-idea-1"></i></div>
                         <h2>Graphic Design</h2>
-                        <p>Delivering strong, engaging visual designs that strengthen your brand identity.</p>
+                        <p>Delivering strong visual designs that enhance your brand identity.</p>
                     </div>
                 </div>
             </div>
@@ -707,31 +748,45 @@
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
                 <h3>WEBSITE PORTFOLIO</h3>
-                <p>A collection of the best projects and works that I have ever made in the field of web development and information systems..</p>
+                <p>A collection of selected projects and works in web development and information systems.</p>
             </div>
 
             <div class="portfolio-slider-wrapper">
                 <div class="portfolio-slider" data-aos="fade-up" data-aos-delay="100">
 
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_e">
+                            <img src="images/erm_1.png" alt="Project 5" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>INPATIENT ERM</u></h6></a>
+                    </div>
+
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_c">
+                            <img src="images/rkm_1.png" alt="Project 3" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>MATERIAL SUBMISSION INFORMATION SYSTEM</u></h6></a>
+                    </div>
+
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_l">
+                            <img src="images/simanis_1.png" alt="Project 12" class="portfolio-img">
+                        </div> <br>
+                        <a href="http://simanis.jambikota.go.id/" target="_blank"><h6><u>SIMANIS (FOOD SECURITY SERVICE)</u></h6></a>
+                    </div>
+					
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_a">
                             <img src="images/luminos_1.png" alt="Project 1" class="portfolio-img">
                         </div> <br>
                         <a href="https://luminos.or.id" target="_blank"><h6><u>LUMINOS INSTITUTE</u></h6></a>
                     </div>
-
+					
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_b">
                             <img src="images/unrida_1.png" alt="Project 2" class="portfolio-img">
                         </div> <br>
-                        <a href="https://unrida.ac.id" target="_blank"><h6><u>UNIVERSITY OF RIAU INDONESIA</u></h6></a>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <div class="open-gallery-btn" data-filter=".gal_c">
-                            <img src="images/rkm_1.png" alt="Project 3" class="portfolio-img">
-                        </div> <br>
-                        <a href="#" target="_blank"><h6><u>MATERIAL SUBMISSION INFORMATION SYSTEM</u></h6></a>
+                        <a href="https://unrida.ac.id" target="_blank"><h6><u>UNIVERSITAS RIAU INDONESIA</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -742,24 +797,24 @@
                     </div>
 
                     <div class="portfolio-item">
-                        <div class="open-gallery-btn" data-filter=".gal_e">
-                            <img src="images/erm_1.png" alt="Project 5" class="portfolio-img">
-                        </div> <br>
-                        <a href="#" target="_blank"><h6><u>INPATIENT ERM</u></h6></a>
-                    </div>
-
-                    <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_f">
                             <img src="images/gempa_1.png" alt="Project 6" class="portfolio-img">
                         </div> <br>
                         <a href="https://banggempa.jambikota.go.id/" target="_blank"><h6><u>FREE LEGAL AID IN JAMBI CITY</u></h6></a>
                     </div>
 
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_j">
+                            <img src="images/ipmr1.png" alt="Project 10" class="portfolio-img">
+                        </div> <br>
+                        <a href="http://ipmrjambi.my.id/" target="_blank"><h6><u>WEBSITE IPMR JAMBI</u></h6></a>
+                    </div>
+
                     <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_g">
                             <img src="images/gis_1.png" alt="Project 7" class="portfolio-img">
                         </div> <br>
-                        <a href="#" target="_blank"><h6><u>INVESTMENT GEOGRAPHICS</u></h6></a>
+                        <a href="#" target="_blank"><h6><u>GEOGRAFIS INVESTASI</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -767,6 +822,27 @@
                             <img src="images/siakad_1.png" alt="Project 8" class="portfolio-img">
                         </div> <br>
                         <a href="#" target="_blank"><h6><u>ACADEMIC INFORMATION SYSTEM</u></h6></a>
+                    </div>
+
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_n">
+                            <img src="images/law1.png" alt="Project 14" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>LAW OFFICE INFORMATION SYSTEM</u></h6></a>
+                    </div>
+
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_o">
+                            <img src="images/keu1.png" alt="Project 15" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>FINANCIAL INFORMATION SYSTEM</u></h6></a>
+                    </div>
+
+					<div class="portfolio-item">
+                        <div class="open-gallery-btn" data-filter=".gal_p">
+                            <img src="images/bk1.png" alt="Project 16" class="portfolio-img">
+                        </div> <br>
+                        <a href="#" target="_blank"><h6><u>GUIDANCE AND COUNSELING INFORMATION SYSTEM</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -777,24 +853,10 @@
                     </div>
 
                     <div class="portfolio-item">
-                        <div class="open-gallery-btn" data-filter=".gal_j">
-                            <img src="images/ipmr_1.png" alt="Project 10" class="portfolio-img">
-                        </div> <br>
-                        <a href="#" target="_blank"><h6><u>IPMR JAMBI WEBSITE</u></h6></a>
-                    </div>
-
-                    <div class="portfolio-item">
                         <div class="open-gallery-btn" data-filter=".gal_k">
                             <img src="images/pb_1.png" alt="Project 11" class="portfolio-img">
                         </div> <br>
                         <a href="#" target="_blank"><h6><u>PORTOFOLIO</u></h6></a>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <div class="open-gallery-btn" data-filter=".gal_l">
-                            <img src="images/simanis_1.png" alt="Project 12" class="portfolio-img">
-                        </div> <br>
-                        <a href="#" target="_blank"><h6><u>SIMANIS (FOOD SECURITY SERVICE)</u></h6></a>
                     </div>
 
                     <div class="portfolio-item">
@@ -1140,7 +1202,7 @@
                     <div class="gallery-single fix">
                     <img src="images/ipmr_2.png" class="img-fluid" alt="Image 1">
                     <div class="img-overlay">
-                        <a href="images/ipmr_2.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
+                        <a href="images/ipmr2.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
                         <i class="fa fa-picture-o"></i>
                         </a>
                     </div>
@@ -1151,7 +1213,7 @@
                     <div class="gallery-single fix">
                     <img src="images/ipmr_3.png" class="img-fluid" alt="Image 2">
                     <div class="img-overlay">
-                        <a href="images/ipmr_3.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
+                        <a href="images/ipmr3.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
                         <i class="fa fa-picture-o"></i>
                         </a>
                     </div>
@@ -1162,7 +1224,7 @@
                     <div class="gallery-single fix">
                     <img src="images/ipmr_4.png" class="img-fluid" alt="Image 3">
                     <div class="img-overlay">
-                        <a href="images/ipmr_4.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
+                        <a href="images/ipmr4.png" data-rel="prettyPhoto[gal_j]" class="hoverbutton global-radius">
                         <i class="fa fa-picture-o"></i>
                         </a>
                     </div>
@@ -1278,27 +1340,135 @@
                 </div>
             </div>
 
+			<!-- GALERI N -->
+            <div class="row gallery-group gal_n" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/law2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/law2.png" data-rel="prettyPhoto[gal_n]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/law3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/law3.png" data-rel="prettyPhoto[gal_n]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/law4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/law4.png" data-rel="prettyPhoto[gal_n]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+			<!-- GALERI O -->
+            <div class="row gallery-group gal_o" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/keu2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/keu2.png" data-rel="prettyPhoto[gal_o]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/keu3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/keu3.png" data-rel="prettyPhoto[gal_o]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/keu4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/keu4.png" data-rel="prettyPhoto[gal_o]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+			<!-- GALERI P -->
+            <div class="row gallery-group gal_p" style="display:none;">
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/bk2.png" class="img-fluid" alt="Image 1">
+                    <div class="img-overlay">
+                        <a href="images/bk2.png" data-rel="prettyPhoto[gal_p]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/bk3.png" class="img-fluid" alt="Image 2">
+                    <div class="img-overlay">
+                        <a href="images/bk3.png" data-rel="prettyPhoto[gal_o]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 gallery-grid">
+                    <div class="gallery-single fix">
+                    <img src="images/bk4.png" class="img-fluid" alt="Image 3">
+                    <div class="img-overlay">
+                        <a href="images/bk4.png" data-rel="prettyPhoto[gal_p]" class="hoverbutton global-radius">
+                        <i class="fa fa-picture-o"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <div id="design" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>PORTOFOLIO DESIGN</h3>
-                <p>A collection of the best projects and works I have ever done in the field of design.</p>
+                <h3>DESIGN PORTFOLIO</h3>
+                <p>A collection of selected design projects and visual works.</p>
             </div>
 
             <div class="design-slider" data-aos="fade-up" data-aos-delay="100">
-                <div class="design-item"><img src="images/pot1.jpg" alt="Design 1"></div>
+                <div class="design-item"><img src="images/pot7.jpg" alt="Design 7"></div>
+                <div class="design-item"><img src="images/pot9.jpg" alt="Design 9"></div>
+                <div class="design-item"><img src="images/pot10.jpg" alt="Design 10"></div>
                 <div class="design-item"><img src="images/pot2.jpg" alt="Design 2"></div>
                 <div class="design-item"><img src="images/pot3.jpg" alt="Design 3"></div>
                 <div class="design-item"><img src="images/pot4.jpg" alt="Design 4"></div>
                 <div class="design-item"><img src="images/pot5.jpg" alt="Design 5"></div>
                 <div class="design-item"><img src="images/pot6.jpg" alt="Design 6"></div>
-                <div class="design-item"><img src="images/pot7.jpg" alt="Design 7"></div>
                 <div class="design-item"><img src="images/pot8.jpg" alt="Design 8"></div>
-                <div class="design-item"><img src="images/pot9.jpg" alt="Design 9"></div>
-                <div class="design-item"><img src="images/pot10.jpg" alt="Design 10"></div>
+                <div class="design-item"><img src="images/pot1.jpg" alt="Design 1"></div>
                 <div class="design-item"><img src="images/logo_1.png" alt="Logo 1"></div>
                 <div class="design-item"><img src="images/logo_2.jpg" alt="Logo 2"></div>
                 <div class="design-item"><img src="images/logo_3.png" alt="Logo 3"></div>
@@ -1335,21 +1505,85 @@
     <div id="certifikat" class="section lb">
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
-                <h3>CERTIFICATES and AWARDS</h3>
-                <p>Some of the training and competency certificates that I have obtained.</p>
+                <h3>CERTIFICATIONS & AWARDS</h3>
+                <p>Selected training and competency certifications I have earned.</p>
             </div>
 
             <div class="certifikat-slider" data-aos="fade-up" data-aos-delay="100">
                 <div class="certifikat-item"><img src="images/s_1.jpg" alt="certifikat 1"></div>
                 <div class="certifikat-item"><img src="images/s_2.jpg" alt="certifikat 2"></div>
-                <div class="certifikat-item"><img src="images/s_3.jpg" alt="certifikat 3"></div>
+                <div class="certifikat-item"><img src="images/s_8.jpg" alt="certifikat 3"></div>
                 <div class="certifikat-item"><img src="images/s_4.JPG" alt="certifikat 4"></div>
                 <div class="certifikat-item"><img src="images/s_5.jpg" alt="certifikat 5"></div>
                 <div class="certifikat-item"><img src="images/s_6.png" alt="certifikat 6"></div>
-                <div class="certifikat-item"><img src="images/s_7.JPG" alt="certifikat 7"></div>
+                <div class="certifikat-item"><img src="images/s_7.jpg" alt="certifikat 7"></div>
+				<div class="certifikat-item"><img src="images/s3.jpg" alt="certifikat 8"></div>
             </div>
         </div>
     </div>
+
+	<div id="tools" class="section wb">
+	    <div class="container" data-aos="fade-up">
+	        <div class="section-title text-left">
+	            <h3>TOOLS & TECHNOLOGIES</h3>
+	            <p>Tools and technologies I use in system analysis, IT project management, and digital solution development.</p>
+	        </div>
+	
+	        <div class="row">
+	            <div class="col-md-12">
+	
+	                <div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>System Analysis Tools 
+	                            <small>UML, VISIO, Figma, Balsamiq</small>
+	                        </h4>
+	                    </div>
+	                </div>
+	
+	                <div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>IT Project Management 
+	                            <small>Microsoft Project, Waterfall</small>
+	                        </h4>
+	                    </div>
+	                </div>
+	
+	                <div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>Web Development 
+	                            <small>PHP, CodeIgniter, HTML, CSS, JavaScript</small>
+	                        </h4>
+	                    </div>
+	                </div>
+	
+	                <div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>Database & Data Management 
+	                            <small>MySQL, Database Design</small>
+	                        </h4>
+	                    </div>
+	                </div>
+	
+	                <div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>Infrastructure & Support 
+	                            <small>Network Configuration, Troubleshooting, Server Management</small>
+	                        </h4>
+	                    </div>
+	                </div>
+
+					<div class="testimonial clearfix" data-aos="fade-up">
+	                    <div class="testi-meta">
+	                        <h4>Design Grapich 
+	                            <small>Corel Draw, Photoshop, Adobe Primer, Adobe Ilustrator, Canva</small>
+	                        </h4>
+	                    </div>
+	                </div>
+	
+	            </div>
+	        </div>
+	    </div>
+	</div>
 
     <div id="project-stats" class="section wb" data-aos="fade-up">
         <div class="overlay" style="position:absolute; top:0; left:0; right:0; bottom:0; background-color: rgba(168, 146, 7, 0.7); z-index:1;"></div>
@@ -1400,10 +1634,8 @@
                                 <li>03 Agustus 2024</li>
                             </ul>
 							<p class="text-justify">The journey to a Master's degree was not a straight or easy one. Every step was fraught with challenges, sacrifices, and valuable lessons. Amidst the busy schedule and responsibilities of my work, I had to manage my time, maintain consistency, and maintain my enthusiasm when fatigue set in.
-
-                            There were times when doubts arose, when research hit a dead end, or when time felt limited. However, with strong determination, unwavering prayer, and the support of family and those closest to me, I slowly overcame all obstacles.
-
-                            This journey wasn't just about the title at the end of my name, but about personal growth, perseverance in learning, and the belief that every effort is never in vain. Finally, with gratitude, I successfully completed my Master's studies and officially earned my Master's degree—a testament to the fact that hard work, patience, and prayer can lead to success.</p>
+							There were times when doubts arose, when research hit a dead end, or when time felt limited. However, with strong determination, unwavering prayer, and the support of family and those closest to me, I slowly overcame all obstacles.
+							This journey wasn't just about the title at the end of my name, but about personal growth, perseverance in learning, and the belief that every effort is never in vain. Finally, with gratitude, I successfully completed my Master's studies and officially earned my Master's degree—a testament to the fact that hard work, patience, and prayer can lead to success.</p>
 						</div>
 					</div>
 				</div>
@@ -1416,8 +1648,7 @@
         <div class="container">
             <div class="section-title text-left" data-aos="fade-up">
             <h3>Client</h3>
-            <p>Thank you to the clients who have entrusted us with their design needs.
-                Each piece below is the result of a collaborative effort to create meaningful, professional, and classy designs.</p>
+            <p>Trusted by various clients and partners in developing professional, functional and sustainable technology solutions.</p>
             </div>
 
             <div class="client-slider-wrapper">
@@ -1469,7 +1700,7 @@
         <div class="container">
             <div class="footer-distributed">
                 <div class="footer-left">
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2025 <a href="#">Fauzan</a> 
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2026 <a href="https://fauzanramadhan12.github.io/porto/html/">Fauzan Purma Ramadhan</a> 
                 </div>
             </div>
         </div>
