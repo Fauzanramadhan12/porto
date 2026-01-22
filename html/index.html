@@ -227,22 +227,17 @@
 
         /* ==== SLIDER STYLE ==== */
         .client-slider-wrapper {
-		  overflow: hidden;
-		  position: relative;
-		  width: 100%;
-		  margin-top: 40px;
-		  cursor: grab;
-		}
-		
-		.client-slider-wrapper:active {
-		  cursor: grabbing;
-		}
-		
-		.client-slider {
-		  display: flex;
-		  gap: 40px;
-		  will-change: transform;
-		}
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        }
+
+        .client-slider {
+        display: flex;
+        width: max-content;
+        animation: slide 70s linear infinite; /* gerak pelan dan halus */
+        }
 
         .client-item {
         min-width: 200px;
@@ -265,8 +260,6 @@
         border-radius: 0;     /* tidak melengkung */
         box-shadow: none;     /* tanpa bayangan */
         background: transparent; /* pastikan tidak ada warna di belakang */
-		user-select: none;
-  		pointer-events: none;
         }
 
         /* Animasi geser otomatis */
@@ -1662,21 +1655,24 @@
             </div>
 
             <div class="client-slider-wrapper">
-			  <div class="client-slider" id="autoSlider">
-			    <div class="client-item"><img src="images/bem.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/ipmr.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/knpi.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/suga.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/luminos.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/unrida.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/smk.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/hmi.webp" class="client-img"></div>
-			    <div class="client-item"><img src="images/hukum.png" class="client-img"></div>
-			    <div class="client-item"><img src="images/pangan.png" class="client-img"></div>
-				<div class="client-item"><img src="images/rs.png" class="client-img"></div>
-				<div class="client-item"><img src="images/mitrakebun.png" class="client-img"></div>
-			  </div>
-			</div>
+                <div class="client-slider" id="autoSlider">
+
+                    <div class="client-item"><img src="images/bem.png" alt="Client 1" class="client-img"></div>
+                    <div class="client-item"><img src="images/ipmr.png" alt="Client 2" class="client-img"></div>
+                    <div class="client-item"><img src="images/knpi.png" alt="Client 3" class="client-img"></div>
+                    <div class="client-item"><img src="images/suga.png" alt="Client 4" class="client-img"></div>
+                    <div class="client-item"><img src="images/luminos.png" alt="Client 5" class="client-img"></div>
+                    <div class="client-item"><img src="images/unrida.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/smk.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/hmi.webp" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/suga.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/hukum.png" alt="Client 6" class="client-img"></div>
+                    <div class="client-item"><img src="images/pangan.png" alt="Client 6" class="client-img"></div>
+					<div class="client-item"><img src="images/rs.png" alt="Client 6" class="client-img"></div>
+					<div class="client-item"><img src="images/mitrakebun.png" alt="Client 6" class="client-img"></div>
+
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1816,67 +1812,6 @@
         });
         });
     </script>
-
-	<script>
-		const slider = document.getElementById("autoSlider");
-		
-		let isDown = false;
-		let startX;
-		let scrollLeft;
-		let autoScroll;
-		let speed = 0.5; // kecepatan auto scroll
-		
-		// ===== AUTO SCROLL =====
-		function startAutoScroll() {
-		  autoScroll = setInterval(() => {
-		    slider.scrollLeft += speed;
-		    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-		      slider.scrollLeft = 0;
-		    }
-		  }, 16); // ~60fps
-		}
-		
-		function stopAutoScroll() {
-		  clearInterval(autoScroll);
-		}
-		
-		startAutoScroll();
-		
-		// ===== DRAG MOUSE =====
-		slider.addEventListener("mousedown", (e) => {
-		  isDown = true;
-		  startX = e.pageX - slider.offsetLeft;
-		  scrollLeft = slider.scrollLeft;
-		  stopAutoScroll();
-		});
-		
-		slider.addEventListener("mouseleave", () => {
-		  isDown = false;
-		  startAutoScroll();
-		});
-		
-		slider.addEventListener("mouseup", () => {
-		  isDown = false;
-		  startAutoScroll();
-		});
-		
-		slider.addEventListener("mousemove", (e) => {
-		  if (!isDown) return;
-		  e.preventDefault();
-		  const x = e.pageX - slider.offsetLeft;
-		  const walk = (x - startX) * 1.5;
-		  slider.scrollLeft = scrollLeft - walk;
-		});
-		
-		// ===== TOUCH (MOBILE) =====
-		slider.addEventListener("touchstart", () => {
-		  stopAutoScroll();
-		});
-		
-		slider.addEventListener("touchend", () => {
-		  startAutoScroll();
-		});
-		</script>
 
 </body>
 </html>
